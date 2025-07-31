@@ -11,14 +11,14 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String username;
-    private String password;
+    private String email;
 
     public User() {
     }
 
-    public User(String username, String password) {
+    public User(String username, String email) {
         this.username = username;
-        this.password = password;
+        this.email = email;
     }
 
     public int getId() {
@@ -37,12 +37,12 @@ public class User {
         this.username = username;
     }
 
-    public String getPassword() {
-        return password;
+    public String getEmail() {
+        return email;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setEmai(String email) {
+        this.email = email;
     }
 
     @Override
@@ -50,7 +50,7 @@ public class User {
         return "User{" +
                 "id=" + id +
                 ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
+                ", email='" + email + '\'' +
                 '}';
     }
 }
